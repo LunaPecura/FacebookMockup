@@ -7,9 +7,8 @@ import MainContainer from './components/MainContainer';
 function App() {
 
 	const [currentChar, setCurrentChar] = useState({});
-	let allCharacters = [];
 
-	// display Character 1 as default upon load
+	// display Character 1 (Gerald Broflovski) as default upon load
 	useEffect( () => {
 		axios.get(`https://spapi.dev/api/characters/1`).then(response => {
 			setCurrentChar(response.data.data)
@@ -26,6 +25,15 @@ function App() {
 	// return a random character with index between 1 and 100
 	const getRandomChar = () => {
 		getChar(Math.ceil(Math.random()*100))
+	}
+
+	const getCharList = () => {
+		let list = [];
+		for(let i=0; i<212; i++) {
+			axios.get(`https://spapi.dev/api/characters/${i}`).then(response => {
+						list.push(response.data.data)
+			})
+		}
 	}
 
 	
