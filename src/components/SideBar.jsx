@@ -6,7 +6,7 @@ const SideBar = () => {
 	
 	return (
 		<div className="SideBar">
-			<h1>Side (Scroll) Bar</h1>
+			<h1>Character List (tbd next)</h1>
 		</div>
 	)
 }
