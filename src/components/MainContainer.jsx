@@ -10,7 +10,7 @@ const MainContainer = (props) => {
 	return (
 		<div className="MainContainer">
 			<SideBar />
-			<Page char={props.currentChar} name={props.name} onClickFn={props.onClickFn}/>
+			<Page char={props.char} onClickFn={props.onClickFn}/>
 		</div>
 	)
 }
