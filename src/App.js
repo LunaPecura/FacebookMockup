@@ -1,12 +1,38 @@
 import "./App.css";
+import axios from 'axios'
+import { useState, useEffect } from "react";
+import TopBar from './components/TopBar';
+import MainContainer from './components/MainContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello Julia and Diana</h1> <h1>Hello Julia and Diana</h1>{" "}
-      <h1>Hello Julia and Diana</h1>
-    </div>
-  );
+
+	const [currentChar, setCurrentChar] = useState([]);
+	const [currentName, setCurrentName] = useState("");
+
+	useEffect( () => {
+		getChar(1);
+	}, []);
+
+	const getChar = (id) => {
+		axios.get('https://spapi.dev/api/characters/'+id).then(response => {
+			setCurrentChar(response);
+			setCurrentName(response.data.data.name);
+			console.log(response.data.data.name);
+		})
+	}
+
+	const getRandomChar = () => {
+		getChar(Math.ceil(Math.random()*100))
+	}
+
+	
+
+	return (
+		<div className="App">
+			<TopBar />
+			<MainContainer name={currentName} onClickFn={getRandomChar} />
+		</div>
+	);
 }
 
 export default App;
