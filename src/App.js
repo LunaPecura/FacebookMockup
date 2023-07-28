@@ -15,7 +15,9 @@ function App() {
 
 	const getChar = (id) => {
 		axios.get('https://spapi.dev/api/characters/'+id).then(response => {
-			setCurrentChar(response);
+			const newChar = response.data.data;
+			setCurrentChar(newChar);
+			// setCurrentChar(response);
 			setCurrentName(response.data.data.name);
 			console.log(response.data.data.name);
 		})
@@ -30,7 +32,7 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			<MainContainer name={currentName} onClickFn={getRandomChar} />
+			<MainContainer char={currentChar} name={currentName} onClickFn={getRandomChar} />
 		</div>
 	);
 }
