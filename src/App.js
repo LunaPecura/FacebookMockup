@@ -40,6 +40,7 @@ function App() {
 
 	return (
 		<div className="App">
+
 			<TopBar />
 			<MainContainer char={currentChar} onClickFn={getRandomChar} />
 		</div>
