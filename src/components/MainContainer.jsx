@@ -1,19 +1,10 @@
 import React from "react";
-import upload from "./images/upload.png";
+import SideBar from "./SideBar";
+
 import './diana.css';
-import fblogo from './images/fblogo.jpg';
-import notification from './images/notification.png';
-import search from './images/search.png';
+import upload from "./images/upload.png";
 import cartman from './images/cartman.png';
-import inbox from './images/inbox.png';
-import video from './images/video.png';
-import friends from './images/friends.png';
 import livevideo from './images/livevideo.png';
-import watch from './images/watch.png';
-import marketplace from './images/marketplace.png';
-import events from './images/events.png';
-import group from './images/group.png';
-import pages from './images/pages.png';
 import southpark from './images/southpark.jpg';
 import photo from './images/photo.png';
 import feeling from './images/feeling.png';
@@ -21,27 +12,13 @@ import kenny from './images/kenny.png';
 import kely from './images/kely.png';
 import stan from './images/stan.png';
 import wendy from './images/wendy.png';
-import location from './images/location.png';
 
 const MainContainer = (props) => {
 	return (
-		<div>
+        <div className="MainContainer">
 
-        <div className="container">
-          <div className="leftcontainer">
-            <div className="links">
-              <a href="#"><img src={friends} alt="" />Friends</a>
-              <a href="#"><img src={livevideo} alt="" />Live</a>
-              <a href="#"><img src={watch} alt="" />Watch videos</a>
-              <a href="#"><img src={marketplace} alt="" />Marketplace</a>
-              <a href="#"><img src={events} alt="" />Events</a>
-              <a href="#"><img src={group} alt="" />Groups</a>
-              <a href="#"><img src={location} alt="" />Locations</a>
-              <a href="#"><img src={pages} alt="" />Pages</a>
-              <a href="#">See More</a>
-            </div>
-          </div>
-
+			<SideBar />
+			
           <div className="maincontainer">
             <div className='maincont'>
               <div className='story story1'>
@@ -123,7 +100,6 @@ const MainContainer = (props) => {
             </div>
           </div>
         </div>
-      </div>
 
   );
 };
