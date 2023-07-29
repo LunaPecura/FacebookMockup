@@ -2,6 +2,10 @@ body {
 	background-color: #efefef;
 }
 
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* TopBar component: contains logo, searchbar, 4 icons */
+
 .TopBar {
 	border: 5px solid darkblue;
 	margin: 1px;
@@ -22,18 +26,17 @@ body {
 	cursor: pointer;
 	padding: 5px;
 	border: 1px solid navy;
-}
-.TopBarItem:hover {
+} .TopBarItem:hover {
 	background-color: navy;
 }
 
-.logo { /* also child of TopBar component */
+.logo { 
 	height: 60px;
 	width: 200px;
 	border: 3px solid yellow;
 } 
 
-.searchBox { /* also child of TopBar component */
+.searchBox { 
 	background: #efefef;
 	width: 350px;
 	border-radius: 20px;
@@ -58,7 +61,7 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
-
+/* FOR TESTING PURPOSES (JULIA) */
 
 .testButton {
 	background-color: red;
@@ -72,7 +75,7 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
-
+/* MainContainer component: contains components SideBarLeft, SideBarRight, and MainContent */
 
 .MainContainer {
 	display: flex;
@@ -80,6 +83,10 @@ body {
 	border: 5px solid seagreen;
 	margin: 1px;
 }
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* SideBarLeft component: contains links */
 
 .SideBarLeft {
 	width: 200px;
@@ -103,7 +110,7 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
-
+/* SideBarRight component: contains events and 1 image */
 
 .SideBarRight{
 	width: 300px;
@@ -146,6 +153,7 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
+/* MainContent component: contains posts (default) or content from LeftSideBar link */
 
 .MainContent {
 	width: 60%;
@@ -261,6 +269,10 @@ body {
 	width: 30px;
 	margin-right: 10px;
 }
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* not currently in use */
 
 .Page {
 	border: 3px solid palevioletred;
