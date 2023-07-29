@@ -24,26 +24,8 @@ import wendy from './images/wendy.png';
 import location from './images/location.png';
 
 const MainContainer = (props) => {
-  return (
-    <>
-      <div>
-        {/* <nav>
-          <div className="navBar-left">
-            <img src={fblogo} alt="" className="logo" />
-            <div className="searchBox">
-              <img src={search} alt="" />
-              <input type="text" placeholder="Search..." />
-            </div>
-            <div className="navUserImg">
-              <img src={cartman} alt="" />
-            </div>
-            <ul>
-              <li> <img src={notification} alt="" /> </li>
-              <li> <img src={inbox} alt="" /> </li>
-              <li> <img src={video} alt="" /> </li>
-            </ul>
-          </div>
-        </nav> */}
+	return (
+		<div>
 
         <div className="container">
           <div className="leftcontainer">
@@ -142,7 +124,7 @@ const MainContainer = (props) => {
           </div>
         </div>
       </div>
-    </>
+
   );
 };
 

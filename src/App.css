@@ -1,42 +1,107 @@
-.TopBar {
-  height: 100px;
-  border: 5px solid darkblue;
-  margin: 1px;
+body {
+	background-color: #efefef;
 }
 
+.TopBar {
+	border: 5px solid darkblue;
+	margin: 1px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #1876f2;
+	padding: 5px 5%;
+	position: sticky;
+	top: 0; 
+	z-index: 100;
+}
+
+.TopBarItem {
+	width: 50px;
+	border-radius: 50% ;
+	cursor: pointer;
+	padding: 5px;
+	border: 1px solid navy;
+}
+.TopBarItem:hover {
+	background-color: navy;
+}
+
+.logo { /* also child of TopBar component */
+	height: 60px;
+	width: 200px;
+	border: 3px solid yellow;
+} 
+
+.searchBox { /* also child of TopBar component */
+	background: #efefef;
+	width: 350px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	border: 3px solid orange;
+}
+
+.searchBox img {
+	width: 18px;
+	border: 2px solid darkgray;
+}
+
+.searchBox input {
+	width: 100%;
+	background-color: transparent;
+	padding: 10px;
+	outline: none;
+	border: 2px solid black;
+}
+
+  /* ---------------------------------------------------------------------------------------------------- */
+
+.testButton {
+	background-color: red;
+	height: 50px;
+	border: solid black;
+	margin: 1px;
+}
+.testButton:hover {
+	background-color: lightblue;
+}
+
+
 .MainContainer {
-  display: flex;
-  border: 5px solid seagreen;
-  margin: 1px;
+	display: flex;
+	border: 5px solid seagreen;
+	margin: 1px;
 }
 
 .SideBar {
-  width: 200px;
-  border: 3px solid salmon;
-  margin: 3px;
+	width: 200px;
+	border: 3px solid salmon;
+	margin: 3px;
 }
 
 .Page {
-  border: 3px solid palevioletred;
-  width: 100%;
-  margin: 3px;
-  padding: 25px;
-  padding-top: 10px;
+	border: 3px solid palevioletred;
+	width: 100%;
+	margin: 3px;
+	padding: 25px;
+	padding-top: 10px;
 }
 
 .profilePic {
-  height: 300px;
-  width: 200px;
-  border: 1px solid black;
-  margin: 3px;
+	height: 300px;
+	width: 200px;
+	border: 1px solid black;
+	margin: 3px;
 }
 
 .content {
-  display: flex;
-  border: solid red;
+	display: flex;
+	border: solid red;
 }
 
 .Profile {
-  border: solid turquoise;
-  margin: 3px;
+	border: solid turquoise;
+	margin: 3px;
 }

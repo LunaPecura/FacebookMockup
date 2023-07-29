@@ -68,9 +68,10 @@ function App() {
 
 	return (
 		<div className="App">
-
 			<TopBar />
-			<button onClick={getCharList}>get charlist (see console)</button>
+			<button className="testButton" onClick={getCharList}>
+				FOR TESTING<br />load character list (see console)
+			</button>
 			<MainContainer char={currentChar} onClickFn={getRandomChar} />
 		</div>
 	);
