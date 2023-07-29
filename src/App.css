@@ -81,7 +81,7 @@ body {
 	margin: 1px;
 }
 
-.SideBar {
+.SideBarLeft {
 	width: 200px;
 	border: 3px solid salmon;
 	margin: 3px;
@@ -89,17 +89,60 @@ body {
 	align-self: flex-start;
 }
 
-.SideBar a{ 
+.SideBarLeft a{ 
 	margin: 25px 20px;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
 }
 
-.SideBar a img{
+.SideBarLeft a img{
 	width: 35px;
 	margin-right: 25px;
 }
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+.SideBarRight{
+	width: 300px;
+	margin: 3px;
+	border: 3px solid rebeccapurple;
+}
+
+.EventItem {
+	display: flex;
+	margin-bottom: 20px;
+	font-size: 16px;
+	border: 2px solid navy;
+	margin: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.eventItemCalendar{
+	border-radius: 10px;
+	height: 65px;
+	width:65px;
+	margin-right: 15px;
+	padding-top: 10p;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0,0,0.1);
+}
+
+.eventItemCalendar span{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: red;
+	font-weight: bold;
+}
+
+.southparkImg { width: 300px; }
 
 
 /* ---------------------------------------------------------------------------------------------------- */

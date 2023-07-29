@@ -9,9 +9,9 @@ import pages from "./images/pages.png";
 import location from './images/location.png';
 
 
-const SideBar = () => {
+const SideBarLeft = () => {
 	return (
-		<div className="SideBar">
+		<div className="SideBarLeft">
 			<a href="#"><img src={friends} alt="" />Friends</a>
 			<a href="#"><img src={livevideo} alt="" />Live</a>
 			<a href="#"><img src={watch} alt="" />Watch videos</a>
@@ -25,4 +25,4 @@ const SideBar = () => {
 	);
 };
 
-export default SideBar;
+export default SideBarLeft;

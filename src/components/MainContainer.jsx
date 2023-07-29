@@ -1,11 +1,11 @@
 import React from "react";
-import SideBar from "./SideBar";
+import SideBarLeft from "./SideBarLeft";
+import SideBarRight from "./SideBarRight";
 
 import './diana.css';
 import upload from "./images/upload.png";
 import cartman from './images/cartman.png';
 import livevideo from './images/livevideo.png';
-import southpark from './images/southpark.jpg';
 import photo from './images/photo.png';
 import feeling from './images/feeling.png';
 import kenny from './images/kenny.png';
@@ -17,8 +17,10 @@ const MainContainer = (props) => {
 	return (
         <div className="MainContainer">
 
-			<SideBar />
-			
+			<SideBarLeft />
+
+{/* -------------------------------------------------------------------------------- */}
+
           <div className="maincontainer">
             <div className='maincont'>
               <div className='story story1'>
@@ -65,43 +67,11 @@ const MainContainer = (props) => {
             </div>
           </div>
 
-          <div className="rightcontainer">
-            <div className='eventTitle'>
-              <h3>Events</h3>
-              <a href="#">See all</a>
-            </div>
+{/* -------------------------------------------------------------------------------- */}
 
-            <div className='event'>
-              <div className="leftEve">
-                <h3>28</h3>
-                <span>July</span>
-              </div>
-              <div className="rightEve">
-                <h3>South Park</h3>
-                <p>Welcome to the South Park event</p>
-                <a href='#'>More Info</a>
-              </div>
-            </div>
-
-            <div className='event'>
-              <div className="leftEve">
-                <h3>12</h3>
-                <span>August</span>
-              </div>
-              <div className="rightEve">
-                <h3>South Park</h3>
-                <p>Welcome to the South Park event</p>
-                <a href='#'>More Info</a>
-              </div>
-            </div>
-
-            <div>
-              <img src={southpark} alt="" className='southparkImg' />
-            </div>
-          </div>
-        </div>
-
-  );
+			<SideBarRight />
+		</div>
+	);
 };
 
 export default MainContainer;
