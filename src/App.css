@@ -1,172 +1,171 @@
 body {
-	background-color: #efefef;
+  background-color: #efefef;
 }
 
 h1 {
-	text-align: center;
+  text-align: center;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* TopBar component: contains logo, searchbar, 4 icons */
 
 .TopBar {
-	border: 5px solid darkblue;
-	margin: 1px;
-	height: fit-content;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #1876f2;
-	padding: 5px 5%;
-	position: sticky;
-	top: 0; 
-	z-index: 100;
+  border: 5px solid darkblue;
+  margin: 1px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1876f2;
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .TopBarItem {
-	width: 50px;
-	border-radius: 50% ;
-	cursor: pointer;
-	padding: 5px;
-	border: 1px solid navy;
-} .TopBarItem:hover {
-	background-color: navy;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid navy;
+}
+.TopBarItem:hover {
+  background-color: navy;
 }
 
-.logo { 
-	height: 60px;
-	width: 200px;
-	border: 3px solid yellow;
-} 
+.logo {
+  height: 60px;
+  width: 200px;
+  border: 3px solid yellow;
+}
 
-.searchBox { 
-	background: #efefef;
-	width: 350px;
-	border-radius: 20px;
-	display: flex;
-	align-items: center;
-	padding: 0 15px;
-	border: 3px solid orange;
+.searchBox {
+  background: #efefef;
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border: 3px solid orange;
 }
 
 .searchBox img {
-	width: 18px;
-	border: 2px solid darkgray;
+  width: 18px;
+  border: 2px solid darkgray;
 }
 
 .searchBox input {
-	width: 100%;
-	background-color: transparent;
-	padding: 10px;
-	outline: none;
-	border: 2px solid black;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border: 2px solid black;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* MainContainer component: contains components SideBarLeft, SideBarRight, and MainContent */
 
 .MainContainer {
-	display: flex;
-	justify-content: space-between;
-	border: 5px solid seagreen;
-	margin: 1px;
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid seagreen;
+  margin: 1px;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* SideBarLeft component: contains links */
 
 .SideBarLeft {
-	width: 200px;
-	border: 3px solid salmon;
-	margin: 3px;
-	position: sticky;
-	align-self: flex-start;
+  width: 200px;
+  border: 3px solid salmon;
+  margin: 3px;
+  position: sticky;
+  align-self: flex-start;
 }
 
-.SideBarLeft a{ 
-	margin: 25px 20px;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
+.SideBarLeft a {
+  margin: 25px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.SideBarLeft a img{
-	width: 35px;
-	margin-right: 25px;
+.SideBarLeft a img {
+  width: 35px;
+  margin-right: 25px;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* SideBarRight component: contains events and 1 image */
 
-.SideBarRight{
-	width: 300px;
-	height: fit-content;
-	margin: 3px;
-	border: 3px solid rebeccapurple;
+.SideBarRight {
+  width: 300px;
+  height: fit-content;
+  margin: 3px;
+  border: 3px solid rebeccapurple;
 }
 
 .EventItem {
-	display: flex;
-	margin-bottom: 20px;
-	font-size: 16px;
-	border: 2px solid navy;
-	margin: 3px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 2px solid navy;
+  margin: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.eventItemCalendar{
-	border-radius: 10px;
-	height: 65px;
-	width:65px;
-	margin-right: 15px;
-	padding-top: 10p;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0,0,0.1);
+.eventItemCalendar {
+  border-radius: 10px;
+  height: 65px;
+  width: 65px;
+  margin-right: 15px;
+  padding-top: 10p;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.eventItemCalendar span{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	color: red;
-	font-weight: bold;
+.eventItemCalendar span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: red;
+  font-weight: bold;
 }
 
-.southparkImg { width: 300px; }
-
+.southparkImg {
+  width: 300px;
+}
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* MainContent component: contains posts (default) or content from LeftSideBar link */
 
 .MainContent {
-	width: 100%;
-	margin: 3px;
-	display: flex;
-	flex-direction: column;
-	border: 3px solid darkgreen;
+  width: 100%;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid darkgreen;
 }
 
-.DefaultContent, .CharacterList, .ProfilePage {
-	margin: 3px;
-	padding: 10px;
-	border: 3px solid yellowgreen;
+.DefaultContent,
+.CharacterList,
+.ProfilePage {
+  margin: 3px;
+  padding: 10px;
+  border: 3px solid yellowgreen;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page ProfilePage */
 
 .content {
-	display: flex;
-	border: 2px solid teal;
+  display: flex;
+  border: 2px solid teal;
 }
 
 
@@ -181,149 +180,234 @@ h1 {
 /* Page CharacterList */
 
 .CharacterList {
-
 }
 
 .CharacterListItem {
-	border: 2px solid teal;
-	margin: 3px;
-}
-
-.CharacterListItem button {
-	height: 40px;
-	font-size: 15px;
-	line-height: 40px;
-	margin: 3px;
-	background-color: darkgray;
-	font-weight: bold;
+  border: 2px solid teal;
+  margin: 3px;
 }
 
 
 .ShortProfile {
-	border: 2px solid turquoise;
-	margin: 3px;
+  border: 2px solid turquoise;
+  margin: 3px;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page DefaultContent */
 
 .mainContentFriends {
-	display: flex;
-	justify-content: space-evenly;
-	margin: 10px;
-	border: 2px solid navy;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  border: 2px solid navy;
 }
 
 .Story {
-	height: 120px;
-	padding-top: 30px;
-	position: relative;
-	background-position: center;
-	background-size: cover;
-	border-radius: 12px;
-	width: 100px;
-	margin: 3px 0px;
-	border: 1px solid olivedrab;
+  height: 120px;
+  padding-top: 30px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  width: 100px;
+  margin: 3px 0px;
+  border: 1px solid olivedrab;
 }
 
-.Story img{
-	position: absolute;
-	width: 40px;
-	border-radius: 50%;
-	top:10px;
-	left: 10px;
-	border-radius: 10px solid black;
+.Story img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px solid black;
 }
 
 .Story p {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	text-align: center;
-	color: black;
-	font-size: 14px;
-	font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .CreatePost {
-	background: white;
-	border-radius: 8px;
-	padding: 20px;
-	columns: lightgray;
-	border: 2px solid lightseagreen;
-	margin: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  columns: lightgray;
+  border: 2px solid lightseagreen;
+  margin: 10px;
 }
 
 .userProfile {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	border: 1px solid aqua;
-	margin: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid aqua;
+  margin: 3px;
 }
 
 .userProfile img {
-	width: 50px;
-	border-radius: 50%;
-	margin-right: 10px;
-	border: 1px solid navy;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid navy;
 }
 
 .userProfile div {
-	font-weight: bold;
-	line-height: 50px;
-} 
+  font-weight: bold;
+  line-height: 50px;
+}
 
 .inputContainer {
-	/* padding-left: 55px; */
-	/* padding-top: 20px; */
-	display: flex;
-	flex-direction: column;
-	border: 2px solid purple;
-	margin: 3px;
+  /* padding-left: 55px; */
+  /* padding-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid purple;
+  margin: 3px;
 }
 
 .inputContainer input {
-	background-color: transparent;
-	padding: 10px;
-	outline: none;
-	border: 1px solid plum;
-	font-size: 18px;
-	margin: 3px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border: 1px solid plum;
+  font-size: 18px;
+  margin: 3px;
 }
 
 .postLinks {
-	display: flex;
-	justify-content: space-evenly;
-	/* padding: 0px 10px; */
-	/* margin-top: 10px; */
-	margin: 3px;
-	padding-left: 10px;
-	border: 1px solid darkcyan;
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 0px 10px; */
+  /* margin-top: 10px; */
+  margin: 3px;
+  padding-left: 10px;
+  border: 1px solid darkcyan;
 }
 
-.postLinks a{
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	color: #626262;
-	margin-right: 30px;
-	/* margin-top: 20px; */
-	font-size: 14px;
-	font-weight: bold;
+.postLinks a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #626262;
+  margin-right: 30px;
+  /* margin-top: 20px; */
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.postLinks a img{
-	width: 30px;
-	margin-right: 10px;
+.postLinks a img {
+  width: 30px;
+  margin-right: 10px;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* not currently in use */
 
 
+.profilePic {
+	height: 300px;
+	width: 200px;
+	border: 1px solid black;
+	margin: 3px;
+}
 
+/* //////////////////////////////////////////////////////////////////// */
+/* THE CSS STYLING THAT I HAVE ADDED SO FAR: SHEHROZE */
+.sideBar-div {
+  display: flex;
+  justify-content: space-between;
+}
+.mid-container-div {
+  width: 1100px;
+}
+.friends-heading {
+  display: flex;
+}
 
+.friend-btn-div {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+.friend-btn {
+  padding: 1%;
+  background-color: rgb(189, 188, 188);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
 
+.profile-div {
+  height: 100px;
+  width: 400px;
+  display: flex;
+  border: 0.5px solid lightgray;
+}
+.profile-pic-div {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic {
+  width: 90px;
+  border-radius: 45px;
+}
+.profile-info-div {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-name-div {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.profile-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.request-duration {
+  color: rgb(95, 93, 93);
+  font-size: 12.5px;
+}
+.profile-btn-div {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 10px;
+  align-items: center;
+}
+.confirm-btn,
+.delete-btn {
+  cursor: pointer;
+  height: 40px;
+  width: 130px;
+  border: none;
+  border-radius: 9px;
+}
+.delete-btn {
+  background-color: rgb(215, 208, 208);
+  font-size: 15px;
+  font-weight: bold;
+}
+.confirm-btn {
+  background-color: rgb(16, 118, 219);
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* //////////////////////////////////////////////////////////////////// */
