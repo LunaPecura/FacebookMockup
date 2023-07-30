@@ -1,3 +1,9 @@
+
+// ONE OF THE MAIN PAGES
+// CHILD OF MainContent COMPONENT
+// contains posts (yet to be implemented) and text input for creating posts
+
+
 import React from 'react';
 import Story from './Story';
 import CreatePost from './CreatePost';
@@ -8,6 +14,7 @@ import kenny from './images/kenny.png';
 import kely from './images/kely.png';
 import stan from './images/stan.png';
 import wendy from './images/wendy.png';
+
 
 const DefaultContent = (props) => {
 	return (

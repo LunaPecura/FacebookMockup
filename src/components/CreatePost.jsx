@@ -1,3 +1,7 @@
+
+// CHILD OF DefaultContent COMPONENT
+
+
 import React from 'react'
 import livevideo from './images/livevideo.png';
 import photo from './images/photo.png';

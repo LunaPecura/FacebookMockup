@@ -1,3 +1,10 @@
+
+// ONE OF THE MAIN PAGES
+// CHILD OF MainContent COMPONENT
+// displays a list of all characters in the Southpark universe
+// each character gets its own CharacterListItem component
+
+
 import React from 'react'
 import CharacterListItem from './CharacterListItem';
 

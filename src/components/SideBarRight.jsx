@@ -1,3 +1,9 @@
+
+// CHILD OF THE MainContainer COMPONENT
+// contains events
+// each event is contained in its own EventItem component
+
+
 import React from 'react'
 import EventItem from './EventItem';
 import southpark from './images/southpark.jpg';

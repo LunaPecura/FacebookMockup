@@ -1,4 +1,8 @@
+// CHILD OF THE MAINCONTAINER COMPONENT
+// contains links to other pages
+
 import React from "react";
+
 import friends from "./images/friends.png";
 import livevideo from "./images/livevideo.png";
 import watch from "./images/watch.png";

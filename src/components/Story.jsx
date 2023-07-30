@@ -1,3 +1,6 @@
+
+// CHILD OF THE DefaultContent COMPONENT
+
 import React from 'react';
 
 const Story = (props) => {

@@ -1,3 +1,6 @@
+
+// CHILD OF THE TopBar COMPONENT
+
 import React from 'react'
 
 

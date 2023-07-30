@@ -1,3 +1,7 @@
+
+// CHILD OF CharListItem COMPONENT
+
+
 import React from 'react'
 
 const ShortProfile = (props) => {

@@ -1,3 +1,6 @@
+
+// CHILD OF TopBar COMPONENT
+
 import React from 'react'
 import search from "./images/search.png";
 

@@ -1,3 +1,8 @@
+
+// CHILD OF THE SideBarRight COMPONENT
+
+
+
 import React from 'react'
 
 const EventItem = (props) => {
