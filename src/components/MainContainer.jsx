@@ -10,7 +10,7 @@ const MainContainer = (props) => {
 	return (
         <div className="MainContainer">
 			<SideBarLeft />
-			<MainContent />
+			<MainContent charList={props.charList} />
 			<SideBarRight />
 		</div>
 	);

@@ -12,6 +12,7 @@ import wendy from './images/wendy.png';
 const DefaultContent = (props) => {
 	return (
 		<div className="DefaultContent">
+			<h1>Page DefaultContent</h1>
 			<div className="mainContentFriends">
 				<Story imgSrc={upload} text="Post Story" bgImg={cartman} />
 				<Story imgSrc={stan} text="Stan" bgImg={stan} />

@@ -1,15 +1,14 @@
 import React from 'react'
-import Story from './Story';
-import CreatePost from './CreatePost';
 import DefaultContent from './DefaultContent';
+import CharacterList from './CharacterList';
 
 
-
-const MainContent = () => {
+const MainContent = (props) => {
 
 	return (
 		<div className="MainContent">
 			<DefaultContent />
+			<CharacterList charList={props.charList} />
 		</div>
 	)
 }

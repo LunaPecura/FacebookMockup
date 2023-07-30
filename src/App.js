@@ -7,7 +7,7 @@ import MainContainer from './components/MainContainer';
 function App() {
 
 	const [currentChar, setCurrentChar] = useState({});
-	let charList = [];
+	const [allChars, setAllChars] = useState([]);
 
 
 	// display Character 1 (Gerald Broflovski) as default upon load
@@ -16,6 +16,11 @@ function App() {
 			setCurrentChar(response.data.data)
 		})
 	}, []);
+
+	// load a list of all characters into the allChars state variable
+	useEffect( () => {
+		getCharList();
+	}, [])
 
 	// helper function: look up character by ID
 	const getChar = (id) => {
@@ -34,6 +39,7 @@ function App() {
 	// which consists of an array of 10 objects and a link to the subsequent page, etc etc
 	const getCharList = () => {
 
+		let charList = []; // accumulator
 		let next; // link to the next page
 		let count = 0; // manually keeping count of the page number due to api bug
 
@@ -41,8 +47,7 @@ function App() {
 		const getFirstChunk = () => {
 			axios.get(`https://spapi.dev/api/characters/`).then(response => {
 				count++; 
-				const list = response.data.data;
-				charList.push(...list);
+				charList.push(...response.data.data);
 				next = response.data.links.next;
 				getNextChunk();
 			});
@@ -52,13 +57,11 @@ function App() {
 		const getNextChunk = () => {
 			axios.get(next).then(response => {
 				count++;
-				const list = response.data.data;
+				charList.push(...response.data.data);
 				next = response.data.links.next;
-				charList.push(...list);
-				console.log(...list);
 				if(count<20) { // pages 21 and 22 return an error => don't touch
 					getNextChunk();} // attn: recursion
-				else { return charList; }
+				else { setAllChars(charList); }
 			});
 		}
 
@@ -70,10 +73,10 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			<button className="testButton" onClick={getCharList}>
+			<button className="testButton" onClick={getCharList} disabled>
 				FOR TESTING<br />load character list (see console)
 			</button>
-			<MainContainer char={currentChar} onClickFn={getRandomChar} />
+			<MainContainer char={currentChar} charList={allChars} />
 		</div>
 	);
 }

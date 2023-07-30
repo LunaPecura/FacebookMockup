@@ -2,6 +2,10 @@ body {
 	background-color: #efefef;
 }
 
+h1 {
+	text-align: center;
+}
+
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* TopBar component: contains logo, searchbar, 4 icons */
@@ -114,6 +118,7 @@ body {
 
 .SideBarRight{
 	width: 300px;
+	height: fit-content;
 	margin: 3px;
 	border: 3px solid rebeccapurple;
 }
@@ -159,14 +164,38 @@ body {
 	width: 100%;
 	margin: 3px;
 	display: flex;
+	flex-direction: column;
 	border: 3px solid darkgreen;
 }
 
-.DefaultContent {
-	width: 100%;
+.DefaultContent, .CharacterList {
 	margin: 3px;
+	padding: 10px;
 	border: 3px solid yellowgreen;
 }
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Page CharacterList */
+
+.CharacterList {
+
+}
+
+.CharacterListItem {
+	border: 2px solid teal;
+	margin: 3px;
+}
+
+
+.ShortProfile {
+	border: 2px solid turquoise;
+	margin: 3px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Page DefaultContent */
 
 .mainContentFriends {
 	display: flex;
@@ -240,7 +269,7 @@ body {
 	/* padding-top: 20px; */
 	display: flex;
 	flex-direction: column;
-	border: 3px solid purple;
+	border: 2px solid purple;
 	margin: 3px;
 }
 
@@ -303,7 +332,3 @@ body {
 	border: solid red;
 }
 
-.Profile {
-	border: solid turquoise;
-	margin: 3px;
-}
