@@ -341,4 +341,71 @@ h1 {
   font-weight: bold;
   text-decoration: none;
 }
+
+.profile-div {
+  height: 100px;
+  width: 400px;
+  display: flex;
+  border: 0.5px solid lightgray;
+}
+.profile-pic-div {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic {
+  width: 90px;
+  border-radius: 45px;
+}
+.profile-info-div {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-name-div {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.profile-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.request-duration {
+  color: rgb(95, 93, 93);
+  font-size: 12.5px;
+}
+.profile-btn-div {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 10px;
+  align-items: center;
+}
+.confirm-btn,
+.delete-btn {
+  cursor: pointer;
+  height: 40px;
+  width: 130px;
+  border: none;
+  border-radius: 9px;
+}
+.delete-btn {
+  background-color: rgb(215, 208, 208);
+  font-size: 15px;
+  font-weight: bold;
+}
+.confirm-btn {
+  background-color: rgb(16, 118, 219);
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bold;
+}
 /* //////////////////////////////////////////////////////////////////// */

@@ -2,6 +2,7 @@ import React from "react";
 import TopBar from "../components/TopBar";
 import SideBarLeft from "../components/SideBarLeft";
 import SideBarRight from "../components/SideBarRight";
+import FriendsSuggProfile from "./FriendsSuggProfile";
 import { Link } from "react-router-dom";
 function FriendSuggestion() {
   return (
@@ -20,6 +21,7 @@ function FriendSuggestion() {
             </Link>
           </div>
           <h3>People You May Know</h3>
+          <FriendsSuggProfile />
         </div>
         <SideBarRight />
       </div>

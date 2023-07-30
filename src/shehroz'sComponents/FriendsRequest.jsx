@@ -3,6 +3,7 @@ import TopBar from "../components/TopBar";
 import SideBarLeft from "../components/SideBarLeft";
 import SideBarRight from "../components/SideBarRight";
 import { Link } from "react-router-dom";
+import FriendsReqProfile from "./FriendsReqProfile";
 
 function FriendsRequest() {
   return (
@@ -21,6 +22,7 @@ function FriendsRequest() {
             </Link>
           </div>
           <h3>Friend Requests</h3>
+          <FriendsReqProfile />
         </div>
         <SideBarRight />
       </div>
