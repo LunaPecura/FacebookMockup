@@ -19,7 +19,7 @@ function App() {
 	const [allChars, setAllChars] = useState([]);
 	
 
-  // load a list of all characters into the allChars state variable
+	// load a list of all characters into the allChars state variable
 	useEffect(() => {
 		loadCharList();
 	}, []);
@@ -63,7 +63,6 @@ function App() {
 		// get the recursive process started
 		getFirstChunk();
 	}
-
 
 	
 	return (
