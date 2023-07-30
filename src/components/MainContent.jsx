@@ -13,6 +13,7 @@ import React from 'react'
 import DefaultContent from './DefaultContent';
 import CharacterList from './CharacterList';
 import ProfilePage from './ProfilePage';
+import FriendsPage from '../shehrozsComponents/FriendsPage'
 
 
 
@@ -20,6 +21,7 @@ const MainContent = (props) => {
 
 	return (
 		<div className="MainContent">
+			<FriendsPage />
 			<DefaultContent />
 			<ProfilePage char={props.char} />
 			<CharacterList charList={props.charList} updateChar={props.updateChar}/>
