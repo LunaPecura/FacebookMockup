@@ -1,6 +1,6 @@
 import React from "react";
 
-function FriendsReqProfile() {
+function FriendsReqProfile(props) {
   return (
     <>
       <div className="profile-div">
