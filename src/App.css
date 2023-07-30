@@ -153,13 +153,24 @@ h1 {
 }
 
 .DefaultContent,
-.CharacterList,
-.ProfilePage,
-.FriendsPage {
+.ProfilePage, 
+.mid-container-div {
   margin: 3px;
   padding: 10px;
   border: 3px solid yellowgreen;
 }
+
+.CharacterList {
+	border: 2px solid rebeccapurple;
+	margin: 3px;
+}
+
+.profile-div {
+	height: 100px;
+	width: 400px;
+	display: flex;
+	border: 0.5px solid lightgray;
+  }
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page ProfilePage */
@@ -328,15 +339,18 @@ h1 {
 	margin: 3px;
 }
 
+
+
+
 /* //////////////////////////////////////////////////////////////////// */
 /* THE CSS STYLING THAT I HAVE ADDED SO FAR: SHEHROZE */
 .sideBar-div {
   display: flex;
   justify-content: space-between;
 }
-/* .mid-container-div {
+.mid-container-div {
   width: 1100px;
-} */
+}
 .friends-heading {
   display: flex;
 }
@@ -354,12 +368,7 @@ h1 {
   text-decoration: none;
 }
 
-.profile-div {
-  height: 100px;
-  width: 400px;
-  display: flex;
-  border: 0.5px solid lightgray;
-}
+
 .profile-pic-div {
   height: 100px;
   width: 100px;

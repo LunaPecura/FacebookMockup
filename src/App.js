@@ -85,7 +85,7 @@ function App() {
           </div>
         }
       />
-      <Route path="/friends" element={<FriendsPage />} />
+      <Route path="/friends" element={<FriendsPage charList={allChars} />} />
       <Route path="/friends/:id" element={<FriendSuggestion />} />
       <Route path="/friends/request" element={<FriendsRequest />} />
     </Routes>

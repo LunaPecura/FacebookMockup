@@ -8,6 +8,7 @@ const ShortProfile = (props) => {
 
 	return (
 		<div className="ShortProfile">
+			<span>Name: {props.char.name} | </span>
 			<span>Age: {props.char.age} | </span>
 			<span>Sex: {props.char.sex} | </span>
 			<span>Hair color: {props.char.hair_color} | </span>

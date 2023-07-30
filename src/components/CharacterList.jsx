@@ -16,7 +16,6 @@ const CharacterList = (props) => {
 
 	return (
 		<div className="CharacterList">
-			<h1>Page CharacterList</h1>
 			{charList}
 		</div>
 	)
