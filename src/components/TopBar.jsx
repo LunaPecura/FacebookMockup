@@ -1,5 +1,4 @@
 import React from "react";
-import "./diana.css";
 import fblogo from "./images/fblogo.jpg";
 import notification from "./images/notification.png";
 import cartman from "./images/cartman.png";

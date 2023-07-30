@@ -34,7 +34,7 @@ function App() {
 	// which consists of an array of 10 objects and a link to the subsequent page, etc etc
 	const getCharList = () => {
 
-		let next;
+		let next; // link to the next page
 		let count = 0; // manually keeping count of the page number due to api bug
 
 		// get first array (characters 1-10)
@@ -58,6 +58,7 @@ function App() {
 				console.log(...list);
 				if(count<20) { // pages 21 and 22 return an error => don't touch
 					getNextChunk();} // attn: recursion
+				else { return charList; }
 			});
 		}
 
