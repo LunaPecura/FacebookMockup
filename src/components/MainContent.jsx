@@ -22,7 +22,8 @@ const MainContent = (props) => {
 		<div className="MainContent">
 			<DefaultContent />
 			<ProfilePage char={props.char} />
-			<CharacterList charList={props.charList} />
+			<CharacterList charList={props.charList} updateChar={props.updateChar}/>
+			
 		</div>
 	)
 }

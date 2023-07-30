@@ -12,24 +12,19 @@ import MainContainer from './components/MainContainer';
 
 function App() {
 
-	const [currentChar, setCurrentChar] = useState({});
+	const [currentChar, setCurrentChar] = useState({ name: "placeholder", id: 0 });
 	const [allChars, setAllChars] = useState([]);
 	
-	useEffect( () => {
-		getChar(1);
-	}, [])
 
 	// load a list of all characters into the allChars state variable
 	useEffect( () => {
 		loadCharList();
 	}, [])
 
-	const getChar = (id) => {
-		axios.get(`https://spapi.dev/api/characters/${id}`).then(response => {
-			setCurrentChar(response.data.data);
-			console.log(response.data.data)
-			console.log(id);
-		});
+	// get character with id 'id' to display on the profile page
+	const updateChar = (id) => {
+		setCurrentChar(allChars[id-1])
+		// return allChars[id-1];
 	}
 
 
@@ -60,7 +55,7 @@ function App() {
 				next = response.data.links.next;
 				if(count<20) { // pages 21 and 22 return an error => don't touch
 					getNextChunk();} // attn: recursion
-				else { setAllChars(charList); }
+				else { setAllChars(charList); setCurrentChar(charList[0]); }
 			});
 		}
 	
@@ -72,7 +67,7 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			<MainContainer char={currentChar} charList={allChars} />
+			<MainContainer charList={allChars} char={currentChar} updateChar={updateChar} />
 		</div>
 	);
 }

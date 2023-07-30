@@ -169,6 +169,14 @@ h1 {
 	border: 2px solid teal;
 }
 
+
+.profilePic {
+	height: 300px;
+	width: 200px;
+	border: 1px solid black;
+	margin: 3px;
+}
+
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page CharacterList */
 
@@ -179,6 +187,15 @@ h1 {
 .CharacterListItem {
 	border: 2px solid teal;
 	margin: 3px;
+}
+
+.CharacterListItem button {
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+	margin: 3px;
+	background-color: darkgray;
+	font-weight: bold;
 }
 
 
@@ -306,20 +323,7 @@ h1 {
 /* ---------------------------------------------------------------------------------------------------- */
 /* not currently in use */
 
-/* .Page {
-	border: 3px solid palevioletred;
-	width: 100%;
-	margin: 3px;
-	padding: 25px;
-	padding-top: 10px;
-} */
 
-.profilePic {
-	height: 300px;
-	width: 200px;
-	border: 1px solid black;
-	margin: 3px;
-}
 
 
 

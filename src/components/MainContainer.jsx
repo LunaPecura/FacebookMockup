@@ -18,7 +18,7 @@ const MainContainer = (props) => {
 	return (
         <div className="MainContainer">
 			<SideBarLeft />
-			<MainContent char={props.currentChar} charList={props.charList} />
+			<MainContent charList={props.charList} char={props.char} updateChar={props.updateChar} />
 			<SideBarRight />
 		</div>
 	);

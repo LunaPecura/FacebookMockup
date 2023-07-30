@@ -11,7 +11,7 @@ import CharacterListItem from './CharacterListItem';
 const CharacterList = (props) => {
 
 	const charList = props.charList.map((character, index) => {
-		return <CharacterListItem character={character} key={index} />
+		return <CharacterListItem char={character} updateChar={props.updateChar} key={index} />
 	});
 
 	return (
