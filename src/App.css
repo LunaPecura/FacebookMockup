@@ -65,20 +65,6 @@ h1 {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
-/* FOR TESTING PURPOSES (JULIA) */
-
-.testButton {
-	background-color: red;
-	height: 50px;
-	border: solid black;
-	margin: 1px;
-}
-.testButton:hover {
-	background-color: lightblue;
-}
-
-
-/* ---------------------------------------------------------------------------------------------------- */
 /* MainContainer component: contains components SideBarLeft, SideBarRight, and MainContent */
 
 .MainContainer {
@@ -168,12 +154,20 @@ h1 {
 	border: 3px solid darkgreen;
 }
 
-.DefaultContent, .CharacterList {
+.DefaultContent, .CharacterList, .ProfilePage {
 	margin: 3px;
 	padding: 10px;
 	border: 3px solid yellowgreen;
 }
 
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Page ProfilePage */
+
+.content {
+	display: flex;
+	border: 2px solid teal;
+}
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page CharacterList */
@@ -312,13 +306,13 @@ h1 {
 /* ---------------------------------------------------------------------------------------------------- */
 /* not currently in use */
 
-.Page {
+/* .Page {
 	border: 3px solid palevioletred;
 	width: 100%;
 	margin: 3px;
 	padding: 25px;
 	padding-top: 10px;
-}
+} */
 
 .profilePic {
 	height: 300px;
@@ -327,8 +321,5 @@ h1 {
 	margin: 3px;
 }
 
-.content {
-	display: flex;
-	border: solid red;
-}
+
 

@@ -15,11 +15,22 @@ function App() {
 	const [currentChar, setCurrentChar] = useState({});
 	const [allChars, setAllChars] = useState([]);
 	
+	useEffect( () => {
+		getChar(1);
+	}, [])
 
 	// load a list of all characters into the allChars state variable
 	useEffect( () => {
 		loadCharList();
 	}, [])
+
+	const getChar = (id) => {
+		axios.get(`https://spapi.dev/api/characters/${id}`).then(response => {
+			setCurrentChar(response.data.data);
+			console.log(response.data.data)
+			console.log(id);
+		});
+	}
 
 
 	// get an array of all characters

@@ -21,8 +21,8 @@ const MainContent = (props) => {
 	return (
 		<div className="MainContent">
 			<DefaultContent />
+			<ProfilePage char={props.char} />
 			<CharacterList charList={props.charList} />
-			<ProfilePage char={props.currentChar}/>
 		</div>
 	)
 }
