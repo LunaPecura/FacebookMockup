@@ -9,9 +9,9 @@ import MainContainer from "./components/MainContainer";
 
 // Shehroz's IMPORTS
 import { Route, Routes } from "react-router-dom";
-import FriendsPage from "./shehroz'sComponents/FriendsPage";
-import FriendSuggestion from "./shehroz'sComponents/FriendsSuggestion";
-import FriendsRequest from "./shehroz'sComponents/FriendsRequest";
+import FriendsPage from "./shehrozsComponents/FriendsPage";
+import FriendSuggestion from "./shehrozsComponents/FriendsSuggestion";
+import FriendsRequest from "./shehrozsComponents/FriendsRequest";
 
 function App() {
   const [currentChar, setCurrentChar] = useState({

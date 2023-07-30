@@ -154,7 +154,8 @@ h1 {
 
 .DefaultContent,
 .CharacterList,
-.ProfilePage {
+.ProfilePage,
+.FriendsPage {
   margin: 3px;
   padding: 10px;
   border: 3px solid yellowgreen;
@@ -191,6 +192,15 @@ h1 {
 .ShortProfile {
   border: 2px solid turquoise;
   margin: 3px;
+}
+
+.CharacterListItem button {
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	background-color: darkgray;
+	margin: 3px;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -324,9 +334,9 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.mid-container-div {
+/* .mid-container-div {
   width: 1100px;
-}
+} */
 .friends-heading {
   display: flex;
 }

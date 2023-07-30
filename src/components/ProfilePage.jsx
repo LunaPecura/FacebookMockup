@@ -13,7 +13,6 @@ const ProfilePage = (props) => {
 				<div className="description">ID: </div>
 				<h2>Name: {props.char.name}</h2>
 			</div>
-			<button>Change Character</button>
 
 		</div>
 	)
