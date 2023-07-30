@@ -12,11 +12,16 @@ import group from "./images/group.png";
 import pages from "./images/pages.png";
 import location from './images/location.png';
 
+// Shehroz' Imports
+import { Link } from "react-router-dom";
+
 
 const SideBarLeft = () => {
 	return (
 		<div className="SideBarLeft">
-			<a href="#"><img src={friends} alt="" />Friends</a>
+			<Link to="/friends">
+          <img src={friends} alt="" /> Friends
+        </Link>
 			<a href="#"><img src={livevideo} alt="" />Live</a>
 			<a href="#"><img src={watch} alt="" />Watch videos</a>
 			<a href="#"><img src={marketplace} alt="" />Marketplace</a>

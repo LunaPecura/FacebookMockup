@@ -1,80 +1,96 @@
-
 // ROOT COMPONENT
 // contains components: TopBar (logo etc.), MainComponent (everything else)
 
-
-
 import "./App.css";
 import { useState, useEffect } from "react";
-import axios from 'axios';
-import TopBar from './components/TopBar';
-import MainContainer from './components/MainContainer';
+import axios from "axios";
+import TopBar from "./components/TopBar";
+import MainContainer from "./components/MainContainer";
+
+// Shehroz's IMPORTS
+import { Route, Routes } from "react-router-dom";
+import FriendsPage from "./shehroz'sComponents/FriendsPage";
+import FriendSuggestion from "./shehroz'sComponents/FriendsSuggestion";
+import FriendsRequest from "./shehroz'sComponents/FriendsRequest";
 
 function App() {
+  const [currentChar, setCurrentChar] = useState({});
+  const [allChars, setAllChars] = useState([]);
 
-	const [currentChar, setCurrentChar] = useState({});
-	const [allChars, setAllChars] = useState([]);
-	
-	useEffect( () => {
-		getChar(1);
-	}, [])
+  useEffect(() => {
+    getChar(1);
+  }, []);
 
-	// load a list of all characters into the allChars state variable
-	useEffect( () => {
-		loadCharList();
-	}, [])
+  // load a list of all characters into the allChars state variable
+  useEffect(() => {
+    loadCharList();
+  }, []);
 
-	const getChar = (id) => {
-		axios.get(`https://spapi.dev/api/characters/${id}`).then(response => {
-			setCurrentChar(response.data.data);
-			console.log(response.data.data)
-			console.log(id);
-		});
-	}
+  const getChar = (id) => {
+    axios.get(`https://spapi.dev/api/characters/${id}`).then((response) => {
+      setCurrentChar(response.data.data);
+      console.log(response.data.data);
+      console.log(id);
+    });
+  };
 
+  // get an array of all characters
+  // incoming data consists of an array of 10 (character) objects and a link to the next page,
+  // which consists of an array of 10 objects and a link to the subsequent page, etc etc
+  const loadCharList = () => {
+    let charList = []; // accumulator
+    let next; // link to the next page
+    let count = 0; // manually keeping count of the page number due to api bug
 
-	// get an array of all characters
-	// incoming data consists of an array of 10 (character) objects and a link to the next page,
-	// which consists of an array of 10 objects and a link to the subsequent page, etc etc
-	const loadCharList = () => {
+    // get first array (characters 1-10)
+    const getFirstChunk = () => {
+      axios.get(`https://spapi.dev/api/characters/`).then((response) => {
+        count++;
+        charList.push(...response.data.data);
+        next = response.data.links.next;
+        getNextChunk();
+      });
+    };
 
-		let charList = []; // accumulator
-		let next; // link to the next page
-		let count = 0; // manually keeping count of the page number due to api bug
-	
-		// get first array (characters 1-10)
-		const getFirstChunk = () => {
-			axios.get(`https://spapi.dev/api/characters/`).then(response => {
-				count++; 
-				charList.push(...response.data.data);
-				next = response.data.links.next;
-				getNextChunk();
-			});
-		}
-	
-		// recursively get another array of 10 characters until page 20 is reached
-		const getNextChunk = () => {
-			axios.get(next).then(response => {
-				count++;
-				charList.push(...response.data.data);
-				next = response.data.links.next;
-				if(count<20) { // pages 21 and 22 return an error => don't touch
-					getNextChunk();} // attn: recursion
-				else { setAllChars(charList); }
-			});
-		}
-	
-		// get the recursive process started
-		getFirstChunk();
-	}
+    // recursively get another array of 10 characters until page 20 is reached
+    const getNextChunk = () => {
+      axios.get(next).then((response) => {
+        count++;
+        charList.push(...response.data.data);
+        next = response.data.links.next;
+        if (count < 20) {
+          // pages 21 and 22 return an error => don't touch
+          getNextChunk();
+        } // attn: recursion
+        else {
+          setAllChars(charList);
+        }
+      });
+    };
 
+    // get the recursive process started
+    getFirstChunk();
+  };
 
-	return (
-		<div className="App">
-			<TopBar />
-			<MainContainer char={currentChar} charList={allChars} />
-		</div>
-	);
+  return (
+    <>
+      {/**************Routes**************************/}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="App">
+              <TopBar />
+              <MainContainer char={currentChar} charList={allChars} />
+            </div>
+          }
+        />
+        <Route path="/friends/*" element={<FriendsPage />} />
+        <Route path="/friends/:id" element={<FriendSuggestion />} />
+        <Route path="/friends/request" element={<FriendsRequest />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
