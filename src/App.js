@@ -73,9 +73,9 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			<button className="testButton" onClick={getCharList} disabled>
+			{/* <button className="testButton" onClick={getCharList} disabled>
 				FOR TESTING<br />load character list (see console)
-			</button>
+			</button> */}
 			<MainContainer char={currentChar} charList={allChars} />
 		</div>
 	);
