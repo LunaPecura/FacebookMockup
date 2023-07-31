@@ -20,13 +20,9 @@
 (will fill in later -- Julia)
 
 ## API (req 5)
-(will fill in later -- Julia)
+<a href="https://spapi.dev/docs" target="_blank">Southpark API</a>
 
 ## MVP goals (req 6)
 [SOMEBODY HELP PLEASE LOL]
 
-...
 
-### Sub-Subtitle
-
-Blah
