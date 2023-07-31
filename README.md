@@ -17,7 +17,28 @@
 (will fill in later -- Julia)
 
 ## Component Hierarchy (req 4)
-(will fill in later -- Julia)
+
+<code>
+  
+    App
+    
+        TopBar
+            TopBarItem
+            SearchBox
+            
+        MainContainer -- should ideally contain the Pages
+            SideBarLeft: links
+            MainContent: content being displayed (currently simultaneous)
+                DefaultContent
+                    Story
+                    CreatePost
+                ProfilePage
+                CharacterList
+                    CharacterListItem
+                        ShortProfile
+            SideBarRight: events
+                EventItem
+</code>
 
 ## API (req 5)
 <a href="https://spapi.dev/docs" target="_blank">Southpark API</a>
