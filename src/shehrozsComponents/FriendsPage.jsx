@@ -17,6 +17,7 @@ function FriendsPage(props) {
       <TopBar />
       <div className="sideBar-div">
         <SideBarLeft />
+        {/* <h1>hello diana</h1> */}
         <div className="mid-container-div">
           <h1 className="friends-heading">Friends</h1>
           <div className="friend-btn-div">
