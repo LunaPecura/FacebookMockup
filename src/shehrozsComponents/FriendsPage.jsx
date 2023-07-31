@@ -7,10 +7,9 @@ import { Link } from "react-router-dom";
 import ShortProfile from "../components/ShortProfile";
 
 function FriendsPage(props) {
-
-	const allCharacters = props.charList.map( (character, index) => {
-		return <ShortProfile char={character} key={index} />
-	});
+  const allCharacters = props.charList.map((character, index) => {
+    return <ShortProfile char={character} key={index} />;
+  });
 
   return (
     <>
@@ -28,8 +27,8 @@ function FriendsPage(props) {
               Suggestion
             </Link>
           </div>
-		  <div>{allCharacters}</div>
-		  {/* <CharacterList charList={props.charList} updateChar={props.updateChar}/> */}
+          {/* <div>{allCharacters}</div> */}
+          {/* <CharacterList charList={props.charList} updateChar={props.updateChar}/> */}
         </div>
         <SideBarRight />
       </div>

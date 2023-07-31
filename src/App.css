@@ -153,7 +153,7 @@ h1 {
 }
 
 .DefaultContent,
-.ProfilePage, 
+.ProfilePage,
 .mid-container-div {
   margin: 3px;
   padding: 10px;
@@ -161,16 +161,16 @@ h1 {
 }
 
 .CharacterList {
-	border: 2px solid rebeccapurple;
-	margin: 3px;
+  border: 2px solid rebeccapurple;
+  margin: 3px;
 }
 
 .profile-div {
-	height: 100px;
-	width: 400px;
-	display: flex;
-	border: 0.5px solid lightgray;
-  }
+  height: 100px;
+  width: 400px;
+  display: flex;
+  border: 0.5px solid lightgray;
+}
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* Page ProfilePage */
@@ -180,12 +180,11 @@ h1 {
   border: 2px solid teal;
 }
 
-
 .profilePic {
-	height: 300px;
-	width: 200px;
-	border: 1px solid black;
-	margin: 3px;
+  height: 300px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 3px;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -199,19 +198,18 @@ h1 {
   margin: 3px;
 }
 
-
 .ShortProfile {
   border: 2px solid turquoise;
   margin: 3px;
 }
 
 .CharacterListItem button {
-	height: 40px;
-	font-size: 15px;
-	font-weight: bold;
-	line-height: 40px;
-	background-color: darkgray;
-	margin: 3px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  background-color: darkgray;
+  margin: 3px;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -331,16 +329,12 @@ h1 {
 /* ---------------------------------------------------------------------------------------------------- */
 /* not currently in use */
 
-
 .profilePic {
-	height: 300px;
-	width: 200px;
-	border: 1px solid black;
-	margin: 3px;
+  height: 300px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 3px;
 }
-
-
-
 
 /* //////////////////////////////////////////////////////////////////// */
 /* THE CSS STYLING THAT I HAVE ADDED SO FAR: SHEHROZE */
@@ -368,7 +362,6 @@ h1 {
   text-decoration: none;
 }
 
-
 .profile-pic-div {
   height: 100px;
   width: 100px;
@@ -379,6 +372,8 @@ h1 {
 .profile-pic {
   width: 90px;
   border-radius: 45px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 .profile-info-div {
   height: 100px;
